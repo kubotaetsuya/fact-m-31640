@@ -65,10 +65,10 @@
       </div>
       <div class="right item">
         <div class="item">
-          <button class="ui inverted button">ユーザ登録</button>
+          <button class="ui inverted button"><%= link_to 'ユーザー登録',new_user_registration_path, class: "sign_up" %></button>
         </div>
         <div class="item">
-          <a href="#">ログイン</a>
+          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
         </div>
       </div>
     </div>

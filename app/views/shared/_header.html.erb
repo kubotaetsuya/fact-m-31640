@@ -65,26 +65,41 @@
       </div>
       <div class="right item">
         <div class="item">
+          <% if user_signed_in? %>
+            <a class="item">
+            <i class="book icon"></i>
+            ストック一覧
+          </a>
+        </div>
+        <div class="item">
+          <a class="item">
+            <%= link_to '投稿する', new_post_path, class: "new-postbto" %></li class="header-list">
+          </a>
+          <% else %>
           <button class="ui inverted button"><%= link_to 'ユーザー登録',new_user_registration_path, class: "sign_up" %></button>
         </div>
         <div class="item">
-          <%= link_to 'ログイン', new_user_session_path, class: "login" %>
+          <button class="ui inverted button">
+          <i class="sign in alternate icon"></i>
+          <%= link_to 'ログイン', new_user_session_path, class: "login" %></button>
+          <% end %>
         </div>
       </div>
+
       <div class="ui dropdown item">
-        マイページ
+        マイページ自分の画像
         <i class="dropdown icon"></i>
         <div class="menu">
           <a class="item">
-            <i class="users icon"></i>
+            <i class="user circle icon"></i>
             マイページ
           </a>
           <a class="item">
-            <i class="building outline icon"></i>
+            <i class="edit outline icon"></i>
             下書き一覧
           </a>
           <a class="item">
-            <i class="calendar alternate outline icon"></i>
+            <i class="folder outline icon"></i>
             限定記事一覧
           </a>
           <a class="item">
@@ -93,16 +108,16 @@
           </a>
           <div class="divider"></div>
           <a class="item">
-            <i class="comments outline icon"></i>
+            <i class="cog icon"></i>
             設定
           </a>
           <a class="item">
-            <i class="keyboard icon"></i>
+            <i class="question circle icon"></i>
             ヘルプ
           </a>
           <div class="divider"></div>
           <a class="item">
-            <i class="book icon"></i>
+            <i class="sign out alternate icon"></i>
             ログアウト
           </a>
         </div>

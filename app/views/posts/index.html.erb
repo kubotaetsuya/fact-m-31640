@@ -31,15 +31,20 @@
             <div class="ui large relaxed divided list">
 
               <%# 投稿表時機能 %>
+              <% @posts.each do |post| %>
               <div class="item">
                 <i class="large user icon"></i>
                 <div class="content">
-                  <a class="header">タイトル</a>
+                  <%= link_to  post_path(post.id) do %>
+                    <a class="header"><%= post.title %></a>
+                  <% end %>
                   <div class="description">
-                    内容の一部<i class="thumbs up icon"></i>いいねの数
+                    <%= post.text %><br>
+                    <i class="thumbs up icon"></i>いいねの数
                   </div>
                 </div>
               </div>
+            <% end %>
 
             </div>
           </div>

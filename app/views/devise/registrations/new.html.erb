@@ -1,2 +1,84 @@
 <%= render "shared/header" %>
-<%= render "devise/shared/registrations" %>
+
+<div class="ui black inverted segment">
+  <div class="ui container">
+    <div class="ui grid">
+      <div class="nine wide column">
+        <h1 class="ui jumbotron inverted header">Fact-Mへようこそ</h1>
+        <p class="jumbotron text">
+          Fact-Mは、音楽に関する知識や経験を記録、共有するためのサービスです。
+          技術や機材の扱い方、自分で学んだことのアウトプットに役立てその経験や知識を共有しよう！
+        </p>
+    </div>
+      <div class="seven wide column">
+        <form class="ui grid form">
+          <div class="row">
+            <div class="four wide column"></div>
+            <div class="twelve wide column">
+              <button class="ui icon large button" type="button">
+                <i class="github icon"></i>
+                GitHub
+              </button>
+              <button class="ui icon large button" type="button">
+                <i class="twitter icon"></i>
+                Twitter
+              </button>
+              <button class="ui icon large button" type="button">
+                <i class="google icon"></i>
+                Google
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide column"></div>
+            <div class="twelve wide column">
+              <div class="ui horizontal inverted divider">OR</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide right aligned label column">
+              ユーザ名
+            </div>
+            <div class="twelve wide column">
+              <input class="ui input" type="text" placeholder="qiitan"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide right aligned label column">
+              メールアドレス
+            </div>
+            <div class="twelve wide column">
+              <input class="ui input" type="text" placeholder="qiitan"/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide right aligned label column">
+              パスワード
+            </div>
+            <div class="twelve wide column">
+              <input class="ui input" type="password" placeholder="qiitan"/>
+              <p>8文字以上、英・数・記号が使えます</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide column"></div>
+            <div class="twelve wide column">
+              <img src="reCAPTCHA.png"></img>
+            </div>
+          </div>
+          <div class="row">
+            <div class="four wide column"></div>
+            <div class="five wide column">
+              <button class="ui inverted fluid button" type="button">登録する</button>
+            </div>
+            <div class="seven wide column">
+              登録には<a href="#">利用規約</a>に同意する必要があります。
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>

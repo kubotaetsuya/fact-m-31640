@@ -14,22 +14,3 @@
  *= require_self
  */
 
-.ui.black.inverted.segment {
-  height: 500px;
-}
-.ui.jumbotron.inverted.header {
-  margin-top: 2em;
-  font-size: 3.5em;
-}
-.jumbotron.text {
-  font-size: 1.2em;
-}
-.row {
-  padding: 5px!important;
-}
-.label.column {
-  font-size: 0.9em;
-}
-.ui.black.inverted.segment{
-  margin: 0em;
-}

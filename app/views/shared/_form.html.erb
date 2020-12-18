@@ -1,0 +1,18 @@
+
+<%= form_with model: @post, local: true do |form| %>
+    <div class="content-title">
+      <%= form.text_field :title, class:"form_title", placeholder:"タイトル" %>
+    </div>
+    <div class="content-tag">
+      <p>tagが入ります</p>
+    </div>
+    <div class="content-text">
+      <%= form.text_area :text, class:"form_text", placeholder:"音楽の知識や技術を共有しよう" %>
+    </div>
+    <div class="content-submit">
+      <div class="right-content">
+        <%= form.submit "投稿する", class:"form_submit"%>
+      </div>
+    </div>
+<% end %>
+

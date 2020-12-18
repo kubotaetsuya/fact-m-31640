@@ -1,7 +1,9 @@
 <div class="ui orange inverted segment">
   <div class="ui container">
     <div class="ui orange inverted borderless menu">
-      <div class="header item">Fact-M</div>
+
+      <div class="header item"><%= link_to 'Fact-M', "/" %></div>
+        
         <div class="ui dropdown item">
             <i class="caret square down icon"></i>
           <div class="menu">
@@ -65,10 +67,59 @@
       </div>
       <div class="right item">
         <div class="item">
-          <button class="ui inverted button">ユーザ登録</button>
+          <% if user_signed_in? %>
+            <a class="item">
+            <i class="book icon"></i>
+            ストック一覧
+          </a>
         </div>
         <div class="item">
-          <a href="#">ログイン</a>
+            <%= link_to '投稿する', new_post_path, class: "new-postbto" %></li class="header-list">
+          <% else %>
+          <button class="ui inverted button"><%= link_to 'ユーザー登録',new_user_registration_path, class: "sign_up" %></button>
+        </div>
+        <div class="item">
+          <button class="ui inverted button">
+          <i class="sign in alternate icon"></i>
+          <%= link_to 'ログイン', new_user_session_path, class: "login" %></button>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="ui dropdown item">
+        マイページ自分の画像
+        <i class="dropdown icon"></i>
+        <div class="menu">
+          <a class="item">
+            <i class="user circle icon"></i>
+            マイページ
+          </a>
+          <a class="item">
+            <i class="edit outline icon"></i>
+            下書き一覧
+          </a>
+          <a class="item">
+            <i class="folder outline icon"></i>
+            限定記事一覧
+          </a>
+          <a class="item">
+            <i class="search icon"></i>
+            編集リクエスト一覧
+          </a>
+          <div class="divider"></div>
+          <a class="item">
+            <i class="cog icon"></i>
+            設定
+          </a>
+          <a class="item">
+            <i class="question circle icon"></i>
+            ヘルプ
+          </a>
+          <div class="divider"></div>
+          <a class="item">
+            <i class="sign out alternate icon"></i>
+            ログアウト
+          </a>
         </div>
       </div>
     </div>

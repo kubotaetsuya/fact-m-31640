@@ -35,9 +35,10 @@
               <div class="item">
                 <i class="large user icon"></i>
                 <div class="content">
-                  <%= link_to  post_path(post.id) do %>
-                    <a class="header"><%= post.title %></a>
+                  <a class="header">
+                    <%= link_to post_path(post.id) do %><%= post.title %>
                   <% end %>
+                  </a>
                   <div class="description">
                     <%= post.text %><br>
                     <i class="thumbs up icon"></i>いいねの数
